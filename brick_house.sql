@@ -79,14 +79,17 @@ SELECT *
 FROM Houses;
 
 
-CREATE TABLE HouseComponent (
-	ComponentID VARCHAR(10) PRIMARY KEY,
+CREATE TABLE Houseent (
+	entID VARCHAR(10) PRIMARY KEY,
 	HouseID VARCHAR (10) NOT NULL,
-	ComponentCategory VARCHAR(50) NOT NULL,
-	ComponentName VARCHAR (50) NOT NULL
+	entType VARCHAR(50) NOT NULL,
+	entName VARCHAR (50) NOT NULL,
+	CONSTRAINTS fk_houseent_house
+		FOREIGN KEY (HouseID)
+		REFERENCES Houses(HouseID)
 	);
 
-INSERT INTO HouseComponent
+INSERT INTO Houseent
 VALUES
 ('C001', 'H004', 'Wall', 'North Wall'),
 ('C002', 'H004', 'Wall', 'South Wall'),
@@ -140,13 +143,13 @@ ORDER BY PartID, ColourID;
 
 CREATE TABLE BillOfMaterials (
 	BOMID VARCHAR(10) PRIMARY KEY,
-	ComponentID VARCHAR(20) NOT NULL,
+	entID VARCHAR(20) NOT NULL,
 	PartColourID VARCHAR (20) NOT NULL,
 	Quantity INT NOT NULL,
 
-	CONSTRAINT fk_bom_component
-		FOREIGN KEY (ComponentID)
-		REFERENCES HouseComponent(ComponentID),
+	CONSTRAINT fk_bom_ent
+		FOREIGN KEY (entID)
+		REFERENCES Houseent(ComponentID),
 
 	CONSTRAINT fk_bom_partcolour
 		FOREIGN KEY (PartColourID)
