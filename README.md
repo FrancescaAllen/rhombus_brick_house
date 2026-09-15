@@ -1,11 +1,23 @@
 # <h1 align="center"> Rhombus Brick House Challenge - August and September 2026 </h1>
 
 ## <ins> Contents </ins>
-- brick_house.sql
-### [1. Overview] (#1.-Overview)
+
+🖥️ - [Overview](#Overview)
+
+🧰 - [Tools Used](#Tools-Used)
+
+🚀 - [Deployment Instructions](#Deployment-Instructions)
+
+🔬 - [Scope](#Scope)
+
+📚 - [A Poem](#A-Poem)
 
 
-### 1. Overview
+---
+
+## Overview
+🖥️
+
 The aim of this project was to design, build, deploy and explain a relational database model representing the structure and component parts of a fictional plastic brick house.
 
 The Rhombus Team have developed a PostgreSQL database solution to demonstrate
@@ -14,17 +26,17 @@ The Rhombus Team have developed a PostgreSQL database solution to demonstrate
 
 ---
 
-## <ins> Tools used </ins>
+## Tools Used
 - PostgreSQL
 - pgAdmin
 
 ---
 
-## <ins> Deployment Instructions </ins>
+## Deployment Instructions
 
 ---
 
-## <ins> Scope </ins>
+## Scope
 - A parts catalogue
 - A catalogue of valid colours :tada:
 - A way to represent different part-and-colour combinations
@@ -39,13 +51,14 @@ The Rhombus Team have developed a PostgreSQL database solution to demonstrate
 
 ---
 
-## <ins> A Poem </ins>
+## A Poem
+📚
 
 <img width="840" height="545" alt="Cell Brian Bilston" src="https://github.com/user-attachments/assets/9c61a8fb-c28a-459e-85b5-fead909b833f" />
 
 --- 
 
-## <ins> Thank you </ins>
+## Thank you
 
 🦏 Rhombus Team 🦏
 
