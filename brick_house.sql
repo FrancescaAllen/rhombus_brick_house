@@ -104,7 +104,6 @@ VALUES
 ('C011', 'H004', 'Wall', 'Internal Wall')
 ;
 
-
 CREATE TABLE PartColours (
 	PartColourID VARCHAR(20) PRIMARY KEY,
 	PartID VARCHAR(20) NOT NULL,
@@ -134,12 +133,23 @@ SELECT
 FROM Parts p
 CROSS JOIN Colours c;
 
--- rather than manually inputting the colour combos here is a cross join
-
 SELECT *
 FROM PartColours
 ORDER BY PartID, ColourID;
 
+CREATE TABLE Rooms (
+    RoomID VARCHAR(10) PRIMARY KEY,
+    HouseID VARCHAR(10) NOT NULL,
+    RoomName VARCHAR(50) NOT NULL,
+    FloorComponentID VARCHAR(10) NOT NULL,
+    FOREIGN KEY (HouseID)
+        REFERENCES Houses(HouseID),
+ 
+    FOREIGN KEY (FloorComponentID)
+ 
+        REFERENCES HouseComponent(ComponentID)
+ 
+);
 
 CREATE TABLE BillOfMaterials (
 	BOMID VARCHAR(10) PRIMARY KEY,
@@ -175,7 +185,12 @@ VALUES
 ('BM0012', 'C011', 'BK001-W001', 40)
 ;
 
-
 SELECT * 
 FROM BillOfMaterials
 ORDER BY BOMID
+
+SELECT
+HouseID,
+Count(*) AS RoomCount
+FROM Rooms
+GROUP BY HouseID
