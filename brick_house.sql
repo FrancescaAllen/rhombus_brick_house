@@ -195,6 +195,57 @@ Count(*) AS RoomCount
 FROM Rooms
 GROUP BY HouseID;
 
+-- Business Rules Evidence queries --
+
+-- The sample house must contain at least:
+
+-- One roof
+
+SELECT
+	HouseID,
+	COUNT(*) AS RoofCount
+FROM HouseComponent
+WHERE ComponentType = 'Roof'
+GROUP BY HouseID;
+
+-- Four walls
+
+SELECT
+	HouseID,
+	COUNT (*) AS WallCount
+FROM HouseComponent
+WHERE ComponentType = 'Wall'
+GROUP BY HouseID;
+
+-- One floor
+
+SELECT
+	HouseID,
+	COUNT (*) AS FloorCount
+FROM HouseComponent
+WHERE ComponentType = 'Floor'
+GROUP BY HouseID;
+
+-- Two rooms
+
+SELECT
+	HouseID,
+	COUNT (*) AS DoorCount
+FROM HouseComponent
+WHERE ComponentType = 'Door'
+GROUP BY HouseID;
+
+-- Two windows
+
+SELECT
+	HouseID,
+	COUNT (*) AS WindowCount
+FROM HouseComponent
+WHERE ComponentType = 'Window'
+GROUP BY HouseID;
+
+-- Composition Rules Evidence queries
+
 
 SELECT
 	hc.ComponentName,
@@ -207,7 +258,7 @@ JOIN PartColours pc
 	ON bom.PartColourID = pc.PartColourID
 JOIN Parts p
 	ON pc.PartID = p.PartID
-WHERE hc.ComponentID = 'C005';
+WHERE hc.ComponentName = 'Roof';
 
 
 
