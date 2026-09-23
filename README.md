@@ -71,17 +71,23 @@ This repository contains the SQL script, deployment instructions and supporting 
 🕵️
 
 <ins> Business Rules
+
 The sample house must contain at least:
+
 - One roof
+
  <img width="449" height="125" alt="image" src="https://github.com/user-attachments/assets/8bdfa9f4-dd07-4103-9ffa-c3d84f0ec98b" />
  
 - Four walls
+
  <img width="439" height="129" alt="image" src="https://github.com/user-attachments/assets/127f61d2-c979-4071-bde4-feb2b9f3530e" />
 
 - One floor
+
  <img width="447" height="122" alt="image" src="https://github.com/user-attachments/assets/67ea66a7-dd81-4ae9-98db-11644f7b962b" />
 
 - Two rooms
+  
  ❗ Issue here ❗
 
 - One door
@@ -91,36 +97,51 @@ The sample house must contain at least:
  <img width="479" height="118" alt="image" src="https://github.com/user-attachments/assets/3f73fd26-7ab6-4f91-a82f-c20fa107298f" />
 
 <ins> Composition Rules
+
 - Walls must be constructed from brick parts
+
  <img width="542" height="268" alt="image" src="https://github.com/user-attachments/assets/088aeeff-2cfc-427b-955a-fbf978ed87ac" />
 
 - A roof must contain both tile and rafter parts
+
 <img width="653" height="157" alt="image" src="https://github.com/user-attachments/assets/074e0748-e05e-4ce5-a87a-038ffcd546be" />
 
 - Rooms must be associated with a floor
+  
    ❗ Add in ❗
 
 - Repeated use of the same part should normally be represented using a quantity
+  
    ❗ Add in ❗
 
-- Catalogue definitions must be separated from their physical use in a particular house and include more than one physical house
-   ❗ Add here ❗
+- Catalogue definitions must be separated from their physical use in a particular house and *include more than one physical house*
+
+  <img width="239" height="125" alt="image" src="https://github.com/user-attachments/assets/a8ef62cf-c605-473b-8f29-bb47080cfc09" />
+
+  *For example:*
+
+   <img width="574" height="350" alt="image" src="https://github.com/user-attachments/assets/eece1854-d37f-48b0-85e5-21b8f807e294" />
 
 - Quantities must be positive whole numbers
+
   <img width="924" height="109" alt="image" src="https://github.com/user-attachments/assets/6f134734-3fd4-44b5-bed6-a262e284b53e" />
 
   *Shows zero rows as all are above zero*
 
 - Employ the use of multiple colours
+- 
   <img width="244" height="131" alt="image" src="https://github.com/user-attachments/assets/a97cd46c-1bd0-4c79-a4e1-0527a12c3c06" />
 
-   *For example*:
+   *For example:*
+  
   <img width="568" height="266" alt="image" src="https://github.com/user-attachments/assets/787c6eb0-7f95-4d2a-a3f4-95c2d0fedb12" />
 
 - Required relationships must be protected through appropriate keys and constraints
+  
   ❗Add in ❗
 
 - Invalid or orphaned references must not be permitted
+  
  ❗Add in ❗
 
 ---
