@@ -153,13 +153,13 @@ CREATE TABLE Rooms (
 
 CREATE TABLE BillOfMaterials (
 	BOMID VARCHAR(10) PRIMARY KEY,
-	entID VARCHAR(20) NOT NULL,
+	ComponentID VARCHAR(20) NOT NULL,
 	PartColourID VARCHAR (20) NOT NULL,
 	Quantity INT NOT NULL,
 
-	CONSTRAINT fk_bom_ent
-		FOREIGN KEY (entID)
-		REFERENCES Houseent(ComponentID),
+	CONSTRAINT fk_bom_component
+		FOREIGN KEY (ComponentID)
+		REFERENCES HouseComponent(ComponentID),
 
 	CONSTRAINT fk_bom_partcolour
 		FOREIGN KEY (PartColourID)
@@ -187,10 +187,27 @@ VALUES
 
 SELECT * 
 FROM BillOfMaterials
-ORDER BY BOMID
+ORDER BY BOMID;
 
 SELECT
 HouseID,
 Count(*) AS RoomCount
 FROM Rooms
-GROUP BY HouseID
+GROUP BY HouseID;
+
+
+SELECT
+	hc.ComponentName,
+	p.PartName,
+	bom.Quantity
+FROM BillOfMaterials bom
+JOIN HouseComponent hc
+	ON bom.ComponentID = hc.ComponentID
+JOIN PartColours pc
+	ON bom.PartColourID = pc.PartColourID
+JOIN Parts p
+	ON pc.PartID = p.PartID
+WHERE hc.ComponentID = 'C005';
+
+
+
