@@ -228,6 +228,10 @@ GROUP BY HouseID;
 
 -- Two rooms
 
+-- issue here?
+
+-- One door
+
 SELECT
 	HouseID,
 	COUNT (*) AS DoorCount
@@ -246,6 +250,21 @@ GROUP BY HouseID;
 
 -- Composition Rules Evidence queries
 
+-- Walls must be constructed from bricks
+
+SELECT
+	hc.ComponentName,
+	p.PartName
+FROM BillOfMaterials bom
+JOIN HouseComponent hc
+	ON bom.ComponentID = hc.ComponentID
+JOIN PartColours pc
+	ON bom.PartColourID = pc.PartColourID
+JOIN Parts p
+	ON pc.PartID = p.PartID
+WHERE HC.ComponentType = 'Wall';
+
+-- A roof must contain both tile and rafter parts
 
 SELECT
 	hc.ComponentName,
@@ -259,6 +278,40 @@ JOIN PartColours pc
 JOIN Parts p
 	ON pc.PartID = p.PartID
 WHERE hc.ComponentName = 'Roof';
+
+-- Rooms must be associated with a floor
+
+-- issue here?
+
+
+-- Repeated use of the same part should normally be represented using a quantity
+
+-- can see this in the BillOfMaterials table as-is
+
+-- Include more than one physical house
+
+SELECT 
+	COUNT(*) AS HouseCount
+FROM Houses;
+
+SELECT *
+FROM Houses
+
+-- Quantities must be postiive whole numbers
+
+SELECT *
+FROM BillOfMaterials
+WHERE Quantity <= 0;
+
+-- Employ the use of multiple colours
+
+
+SELECT 
+	Count (*) AS ColourCount
+FROM Colours;
+
+SELECT *
+FROM Colours;
 
 
 
