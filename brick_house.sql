@@ -79,17 +79,17 @@ SELECT *
 FROM Houses;
 
 
-CREATE TABLE Houseent (
-	entID VARCHAR(10) PRIMARY KEY,
+CREATE TABLE HouseComponent (
+	ComponentID VARCHAR(10) PRIMARY KEY,
 	HouseID VARCHAR (10) NOT NULL,
-	entType VARCHAR(50) NOT NULL,
-	entName VARCHAR (50) NOT NULL,
-	CONSTRAINTS fk_houseent_house
+	ComponentType VARCHAR(50) NOT NULL,
+	ComponentName VARCHAR (50) NOT NULL,
+	CONSTRAINT fk_housecomponent_house
 		FOREIGN KEY (HouseID)
 		REFERENCES Houses(HouseID)
 	);
 
-INSERT INTO Houseent
+INSERT INTO HouseComponent
 VALUES
 ('C001', 'H004', 'Wall', 'North Wall'),
 ('C002', 'H004', 'Wall', 'South Wall'),
