@@ -63,6 +63,27 @@ This repository contains the SQL script, deployment instructions and supporting 
 
 ❗ Needs finishing when we know what we're doing - started but not sure how much detail we go into ❗
 
+
+---
+## Evidence
+
+<ins> Business Rules
+The sample house must contain at least:
+- One roof
+-   <img width="449" height="125" alt="image" src="https://github.com/user-attachments/assets/8bdfa9f4-dd07-4103-9ffa-c3d84f0ec98b" />
+- Four walls
+-   <img width="439" height="129" alt="image" src="https://github.com/user-attachments/assets/127f61d2-c979-4071-bde4-feb2b9f3530e" />
+- One floor
+-   <img width="447" height="122" alt="image" src="https://github.com/user-attachments/assets/67ea66a7-dd81-4ae9-98db-11644f7b962b" />
+- Two rooms
+-   ❗ Issue here ❗
+- One door
+-   <img width="459" height="129" alt="image" src="https://github.com/user-attachments/assets/ffd00862-e0d3-4707-8bae-a39ce40e55bb" />
+- Two windows
+-   <img width="479" height="118" alt="image" src="https://github.com/user-attachments/assets/3f73fd26-7ab6-4f91-a82f-c20fa107298f" />
+
+<ins> Composition Rules
+
 ---
 
 ## A Poem
