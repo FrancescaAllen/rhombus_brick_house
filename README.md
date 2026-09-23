@@ -108,13 +108,15 @@ The sample house must contain at least:
 
 - Rooms must be associated with a floor
   
-   ❗ Add in ❗
+   ❗ Issue here ❗
 
 - Repeated use of the same part should normally be represented using a quantity
-  
-   ❗ Add in ❗
 
-- Catalogue definitions must be separated from their physical use in a particular house and *include more than one physical house*
+ Apparent from table:
+ 
+ <img width="913" height="518" alt="image" src="https://github.com/user-attachments/assets/852eb89c-5cc4-45c4-9623-329a06964a95" />
+
+ - Catalogue definitions must be separated from their physical use in a particular house and *include more than one physical house*
 
   <img width="239" height="125" alt="image" src="https://github.com/user-attachments/assets/a8ef62cf-c605-473b-8f29-bb47080cfc09" />
 
@@ -136,13 +138,12 @@ The sample house must contain at least:
   
   <img width="568" height="266" alt="image" src="https://github.com/user-attachments/assets/787c6eb0-7f95-4d2a-a3f4-95c2d0fedb12" />
 
-- Required relationships must be protected through appropriate keys and constraints
-  
-  ❗Add in ❗
-
+- Required relationships must be protected through appropriate keys and constraints; AND
 - Invalid or orphaned references must not be permitted
-  
- ❗Add in ❗
+
+  <img width="586" height="502" alt="image" src="https://github.com/user-attachments/assets/f629f332-1ff3-442d-a7aa-41e2d9e22e49" />
+
+ A PartColour record cannot exist unless it is linked to a valid Part and a valid Colour due to both fields possessing NOT NULL and being enforced by the relevant Foreign Key.  This prevents the creation of orphaned records.  Using UNIQUE helps ensure that the combination cannot be created more than once.
 
 ---
 
