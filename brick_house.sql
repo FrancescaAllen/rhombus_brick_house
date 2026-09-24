@@ -140,16 +140,21 @@ ORDER BY PartID, ColourID;
 CREATE TABLE Rooms (
     RoomID VARCHAR(10) PRIMARY KEY,
     HouseID VARCHAR(10) NOT NULL,
-    RoomName VARCHAR(50) NOT NULL,
     FloorComponentID VARCHAR(10) NOT NULL,
-    FOREIGN KEY (HouseID)
+    CONSTRAINT fk_room_house
+		FOREIGN KEY (HouseID)
         REFERENCES Houses(HouseID),
  
-    FOREIGN KEY (FloorComponentID)
- 
+    CONSTRAINT fk_room_floor
+		FOREIGN KEY (FloorComponentID)
         REFERENCES HouseComponent(ComponentID)
- 
-);
+ );
+
+INSERT INTO Rooms (RoomID, HouseID, FloorComponentID)
+VALUES
+('RM001', 'H004', 'C006'),
+('RM002', 'H004', 'C006'),
+('RM003', 'H004', 'C006');
 
 CREATE TABLE BillOfMaterials (
 	BOMID VARCHAR(10) PRIMARY KEY,
@@ -228,7 +233,10 @@ GROUP BY HouseID;
 
 -- Two rooms
 
--- issue here?
+SELECT HouseID,
+COUNT(*) AS RoomCount
+FROM Rooms
+GROUP BY HouseID;
 
 -- One door
 
@@ -281,8 +289,14 @@ WHERE hc.ComponentName = 'Roof';
 
 -- Rooms must be associated with a floor
 
--- issue here?
-
+SELECT 
+	r.RoomID,
+	r.HouseID,
+	r.FloorComponentID,
+	hc.ComponentName
+FROM Rooms r
+LEFT JOIN HouseComponent hc
+	ON r.FloorComponentID = hc.ComponentID;
 
 -- Repeated use of the same part should normally be represented using a quantity
 
