@@ -62,6 +62,9 @@ This repository contains the SQL script, deployment instructions and supporting 
 <ins> Prerequisites
 - Ensure software detailed above is installed
 
+<ins> Reference
+- Refer to Presentation, Design Rationale, ERD and Data Dictionary for information
+
 <ins> Database creation
 1. Open pgAdmin and connect
 2. Use code from brick_house.sql and run queries
@@ -88,6 +91,17 @@ Overall, the design focuses on keeping the database simple, organised, and easy 
 ## Evidence
 🕵️
 
+<ins> Data Dictionary
+
+A data dictionary was created to document the structure of the database, including:
+- Table name
+- Column Name
+- Data Type
+- Nullable
+- Key
+- Description
+This provides a central reference for the team and supports the development, testing, implementation and maintainability of the database.
+
 <ins> Business Rules
 
 The sample house must contain at least:
@@ -106,7 +120,7 @@ The sample house must contain at least:
 
 - Two rooms
   
- ❗ Issue here ❗
+ <img width="297" height="82" alt="image" src="https://github.com/user-attachments/assets/4993d883-f563-45a3-87d9-579161fd3332" />
 
 - One door
  <img width="459" height="129" alt="image" src="https://github.com/user-attachments/assets/ffd00862-e0d3-4707-8bae-a39ce40e55bb" />
@@ -125,8 +139,8 @@ The sample house must contain at least:
 <img width="653" height="157" alt="image" src="https://github.com/user-attachments/assets/074e0748-e05e-4ce5-a87a-038ffcd546be" />
 
 - Rooms must be associated with a floor
-  
-   ❗ Issue here ❗
+
+<img width="496" height="118" alt="image" src="https://github.com/user-attachments/assets/f7108e1d-27d3-4655-9f49-7f0fdd5e994c" />
 
 - Repeated use of the same part should normally be represented using a quantity
 
