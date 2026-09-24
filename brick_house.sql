@@ -140,21 +140,22 @@ ORDER BY PartID, ColourID;
 CREATE TABLE Rooms (
     RoomID VARCHAR(10) PRIMARY KEY,
     HouseID VARCHAR(10) NOT NULL,
+    RoomName VARCHAR(50) NOT NULL,
     FloorComponentID VARCHAR(10) NOT NULL,
     CONSTRAINT fk_room_house
-		FOREIGN KEY (HouseID)
+        FOREIGN KEY (HouseID)
         REFERENCES Houses(HouseID),
  
-    CONSTRAINT fk_room_floor
-		FOREIGN KEY (FloorComponentID)
+	CONSTRAINT fk_room_floor
+        FOREIGN KEY (FloorComponentID)
         REFERENCES HouseComponent(ComponentID)
- );
+);
 
-INSERT INTO Rooms (RoomID, HouseID, FloorComponentID)
+INSERT INTO Rooms (RoomID, HouseID, RoomName, FloorComponentID)
 VALUES
-('RM001', 'H004', 'C006'),
-('RM002', 'H004', 'C006'),
-('RM003', 'H004', 'C006');
+('RM001', 'H004', 'Kitchen', 'C006'),
+('RM002', 'H004', 'Living Room', 'C006'),
+('RM003', 'H004', 'WC', 'C006');
 
 CREATE TABLE BillOfMaterials (
 	BOMID VARCHAR(10) PRIMARY KEY,
