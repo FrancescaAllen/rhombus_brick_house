@@ -73,7 +73,7 @@ This repository contains the SQL script, deployment instructions and supporting 
 ## Design Rationale
 🎨
 
-⭐ Our full design rationale is available as a Word document ⭐
+⭐ Our full design rationale is available as a pdf in this README.md ⭐
 
 When designing this database, one of the main decisions was to keep different types of information in separate tables. For example, houses, parts, colours, and bills of materials all have their own tables. This keeps the data organised and avoids storing the same information multiple times.
  
