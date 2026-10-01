@@ -100,6 +100,7 @@ A data dictionary was created to document the structure of the database, includi
 - Nullable
 - Key
 - Description
+
 This provides a central reference for the team and supports the development, testing, implementation and maintainability of the database.
 
 <ins> Business Rules
