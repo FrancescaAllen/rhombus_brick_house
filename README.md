@@ -50,6 +50,7 @@ This repository contains the SQL script, deployment instructions and supporting 
 - PostgreSQL - Database Management system used to create and manage the database
 - pgAdmin 4 - Used to develop, test and administer the database
 - Draw.io - Used to create the ERD
+- Microsoft Co-Pilot - Used to validate our understanding of some aspects of the solution
 - Microsoft Excel - Used for creation and review of table designs and documenting draft queries and design rationales
 - Microsoft PowerPoint - Used to document deliverables including the data dictionary and presentation materials
 - Microsoft Word - Used to document the design rationale.  A summary is included in this README.md
